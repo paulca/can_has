@@ -1,6 +1,6 @@
 h1. Can Has?
 
-Can Has? is a really really simple Rails plugins that adds a DSL for checking a users permissions on a model. It allows you to write something like this:
+Can Has? is a really really simple Rails plugins that adds a nice little helper method for checking a users permissions on a model. It allows you to write something like this:
 
 <pre><code>
   @post = Post.create!(:title => 'My post', :content => 'Interesting stuff')
@@ -10,6 +10,8 @@ Can Has? is a really really simple Rails plugins that adds a DSL for checking a 
     ...don't show it
   end
 </code></pre>
+
+The basic premise is that if a model belongs to a user, that user and anyone else can read it, but only that user can do anything else.
 
 
 h2. Installation
