@@ -73,6 +73,7 @@ To extend the power of the can_* methods, just create them on the model that you
   end
   
   class Bicyle < ActiveRecord::Base
+    belongs_to :user
     
     def can_ride?(user)
       return true if user.has_legs?
